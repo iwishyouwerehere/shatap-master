@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1. user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/pages/chat/chat.css">
+    <link rel="stylesheet" type="text/css" href="/css/alerter.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="/pages/chat/chat.js" type="text/javascript"></script>
+    <script src="/js/alerter.js" type="text/javascript"></script>
+    <script src="/js/storageWrap.js" type="text/javascript"></script>
+    <script src="/js/encryptor.js" type="text/javascript"></script>
+    <script src="/js/styleTools.js" type="text/javascript"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
+</head>
+
+<body>
+    <div id="info">
+        <a href="../../">
+            <img src="/assets/logos/logo_small.png">
+            <img src="/assets/logos/logo_name.png">
+            <img src="/assets/logos/logo_subline.png">
+        </a>
+        <p onclick="Alerter.show('edit_key')"></p>
+    </div>
+    <div id="content">
+        <div id="chat-info">
+            <div id="chat-info-toolbar">
+                <h2></h2>
+                <div id="chat-info-icons">
+                    <i class="material-icons" onclick="event.stopPropagation(); Alerter.show('help')">more_vert</i>
+                </div>
+            </div>
+            <div id="chat-info-content"></div>
+        </div>
+        <div id="chat-messages"></div>
+        <div id="chat-input">
+            <textarea type="text" id="input" tabindex="0" placeholder="Write something..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Write something...'"></textarea>
+            <i class="material-icons" onclick="sendMsg()">send</i>
+        </div>
+    </div>
+
+    <div id="alert"></div>
+</body>
+
+</html>

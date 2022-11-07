@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>shatapp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1. user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/pages/home/home.css">
+    <link rel="stylesheet" type="text/css" href="/css/alerter.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="/pages/home/home.js" type="text/javascript"></script>
+    <script src="/js/alerter.js" type="text/javascript"></script>
+    <script src="/js/storageWrap.js" type="text/javascript"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/12.1.5/js/smooth-scroll.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="info">
+        <a href="/">
+            <img src="/assets/logos/logo_small.png">
+            <img src="/assets/logos/logo_name.png">
+            <img src="/assets/logos/logo_subline.png">
+        </a>
+        <p onclick="Alerter.show('edit_key')"></p>
+    </div>
+
+    <div id="content">
+        <form class="styled-input" action="#safari-puppet">
+            <input type="text" id="input-chat-name" class="shadowed" placeholder="chat name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'chat name'"
+                required>
+            <button id="button-join" onclick="access('join')">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </form>
+        <div id="welcome" class="section">
+            <p>Want to have a space for you?<br><span onclick="access('create')">Create a chat!</span></p>
+            <p>Don't know what Shatapp is about?
+                <a data-scroll href="#presentation" id="scroll" class="round shadowed"><i class="material-icons help">?</i></a>
+            </p>
+        </div>
+        <div id="presentation">
+            <img class="shadowed" src="/assets/images/chat-preview.png">
+            <div class="section">
+                <h4>What is Shatapp?</h4>
+                <p>Cupidatat adipisicing aliqua nostrud mollit officia. Incididunt incididunt proident minim consectetur quis commodo velit.</p>
+            </div>
+        </div>
+        <div id="points">
+            <div class="section section-iconed">
+                <i class="material-icons">verified_user</i>
+                <h6>Privacy</h6>
+                <h4 class="special">We put it before<br><span>anything</span> else.</h4>
+                <p>We know how important it is to stay protected, feel like being at home, with your sweet peluche and your hot chocolate burning
+                up yourself. That's why we developed a chat system where you only care about sending what you want to send,
+                no need to worry.</p>
+            </div>
+            <div class="section section-iconed">
+                <i class="material-icons">security</i>
+                <h6>Security</h6>
+                <h4 class="special">Client-side encryption<br>where <span>you</span> decide<br><span>your</span> security.</h4>
+                <p>But how can we achieve this? By joining a chat you choose a key which will be used to securely encrypt your messages. No
+                one can understand or force them unless they have the same key as you. Neither us can access this data.</p>
+            </div>
+            <div class="section section-iconed">
+                <i class="material-icons">access_time</i>
+                <h6>Time</h6>
+                <h4 class="special">You can <span>hack</span> us,<br>if you have it enough.</h4>
+                <p>That's why we decided to start a countdown time every time a chat is created, so that you leave no tracks. Also, if you're
+                inactive, you get asked to rejoin the chat. Every time someone join a chat it gets a brand new randomly generated,
+                beautiful, username. No one can track you or know if it was actually you.</p>
+            </div>
+            <div class="section section-iconed">
+                <i class="material-icons">code</i>
+                <h6>Code</h6>
+                <h4 class="special">It's <span>open source</span>,<br>as it should.</h4>
+                <p>Etiam eu dapibus ante, in accumsan odio. Pellentesque viverra, nunc ac vestibulum gravida, ligula erat aliquet lorem, eu
+                scelerisque metus odio eu risus. Aliquam erat volutpat. Quisque porttitor tellus sem, at blandit elit laoreet
+                eget. Nam lobortis aliquet risus, in mattis lacus egestas a.</p>
+            </div>
+        </div>
+        <div id="get-started">
+            <div class="section section-gray">
+                <h4>Want to get started?</h4>
+                <p>You can simply create a chat or join one if you know the name. Want a private place to speak with your friends? We have what
+                you want.</p>
+            </div>
+            <div class="appended section-gray">
+                <button class="styled-button shadowed" onclick="access('create')">Create a chat now!</button>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="section">
+        <div id="footer-text">
+            <p>SHATAPP IS OPEN SOURCE (MIT)</p>
+            <p><a>Contact us</a>, read our <a href="/faq">FAQ</a><br>or <a href="https://github.com/kristiannotari/shatapp">contribute</a> on Github <img src="/assets/logos/logo_github.png"></p>
+        </div>
+        <div id="footer-round" class="round shadowed">
+            <img src="/assets/logos/logo_small.png">
+            <p>copyright 2017</p>
+        </div>
+    </div>
+    <div id="alert"></div>
+</body>
+
+</html>

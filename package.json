@@ -1,0 +1,32 @@
+{
+  "name": "shatapp",
+  "version": "0.1.0",
+  "description": "anonymous chat",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install --global postcss-cli autoprefixer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/kristiannotari/shat.git"
+  },
+  "keywords": [
+    "anonymous",
+    "chat"
+  ],
+  "author": "Kristian Notari, Farouk Serragedine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/kristiannotari/shat/issues"
+  },
+  "homepage": "https://gitlab.com/kristiannotari/shat#README",
+  "dependencies": {
+    "express": "^4.15.4",
+    "fs-extra": "^4.0.1",
+    "serve-favicon": "^2.4.4",
+    "sleep-async": "^1.0.1",
+    "socket.io": "^2.0.3"
+  }
+}

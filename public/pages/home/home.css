@@ -1,0 +1,166 @@
+/* ************************************
+  INFO STYLE
+************************************ */
+#info {
+  height: calc(65% - 21px);
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 58px;
+}
+
+#info img {
+  display: block;
+  max-height: none;
+  max-width: none;
+}
+
+#info img:last-of-type {
+  display: block;
+  margin-top: 4px;
+}
+
+#info p {
+  max-width: 250px;
+  margin: 24px 0 0;
+}
+
+/* ************************************
+  CONTENT STYLE
+************************************ */
+#content {
+  position: relative;
+}
+
+#content form {
+  position: absolute;
+  top: -24px;
+  left: calc(50% - 125px);
+}
+
+/* ************************************
+  CONTENT WELCOME SECTION
+************************************ */
+#content #welcome {
+  height: 35vh;
+  min-height: 180px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding-top: 30.5px;
+}
+
+#content #welcome p span {
+  color: #495ece;
+  cursor: pointer;
+}
+
+#content #welcome p span:hover {
+  text-decoration: underline;
+}
+
+#content #welcome #scroll {
+  cursor: pointer;
+  margin: auto;
+  display: block;
+  margin-top: 16px;
+}
+
+#content #welcome #scroll i {
+  line-height: 43px;
+  vertical-align: middle;
+  padding-top: 2px;
+  font-size: 20px;
+  transition: opacity .2s linear;
+}
+
+#content #welcome #scroll i.help {
+  font-family: inherit;
+  padding-top: 0;
+}
+
+/* ************************************
+  CONTENT PRESENTATION SECTION
+************************************ */
+#content #presentation {
+  background-color: #F3F3F3;
+  padding-top: 42px;
+}
+
+#content #presentation img {
+  display: block;
+  margin: auto;
+  width: 75%;
+  max-width: 300px;
+}
+
+#content #presentation .section {
+  margin-top: 42px;
+}
+
+/* ************************************
+  CONTENT POINTS SECTION-ICONED
+************************************ */
+#content #points {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 56px 0;
+}
+
+/* ************************************
+  MEDIA QUERIES
+************************************ */
+@media (min-width: 892px) {
+  #content #points {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  #content #points .section-iconed {
+    width: 50%;
+    text-align: center;
+    flex-shrink: 0;
+  }
+}
+@media (min-width: 892px) {
+  #content #points {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+@media (min-width: 1024px) {
+  #content #welcome {
+    flex-direction: row;
+    max-width: 1600px;
+    margin: auto;
+  }
+
+  #content #welcome p span {
+    color: white;
+    background-color: #495ece;
+    border-radius: 16px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.20);
+    display: block;
+    margin-top: 16px;
+    height: 42px;
+    line-height: 42px;
+  }
+
+  #content #welcome p span:hover {
+    text-decoration: none;
+  }
+
+  #content #welcome #scroll {}
+}
+@media (max-height: 500px) {
+  #info {
+    height: calc(100% + 24px);
+  }
+
+  #content {
+    padding-top: 21px;
+  }
+}

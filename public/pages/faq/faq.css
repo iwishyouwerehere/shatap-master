@@ -1,0 +1,76 @@
+/* ************************************
+  CONTENT WELCOME SECTION
+************************************ */
+#content #welcome i {
+  font-style: normal;
+  line-height: 96px;
+}
+
+/* ************************************
+  CONTENT FAQ FILTER
+************************************ */
+#content #faq-filter {
+  margin: auto auto 96px;
+}
+
+#content #faq-filter select {
+  cursor: pointer;
+}
+
+#content #faq-filter button i {
+  opacity: 1;
+  color: #95989A;
+}
+
+#content #faq-filter select.default-selected {
+  color: #95989A;
+}
+
+/* ************************************
+  CONTENT FAQS SECTION
+************************************ */
+#content #points {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 56px 0;
+}
+
+/* ************************************
+  CONTENT CONTACT-US SECTION
+************************************ */
+#content #contact-us {
+  margin-top: 96px;
+}
+
+/* ************************************
+  MEDIA QUERIES
+************************************ */
+@media (min-width: 892px) {
+  #content #points {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  #content #points .section-iconed {
+    width: 50%;
+    text-align: center;
+    flex-shrink: 0;
+  }
+}
+@media (min-width: 892px) {
+  #content #points {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+@media (min-width: 1280px) {}
+@media (max-height: 500px) {
+  #info {
+    height: calc(100% + 24px);
+  }
+
+  #content {
+    padding-top: 21px;
+  }
+}

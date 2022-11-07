@@ -1,0 +1,350 @@
+@import url( 'https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+
+/*
+  colors:
+    white: #FFFFFF,
+    light-gray: #F3F3F3,
+    gray: #95989A,
+    light-blue: #5c6ed3,
+    blue: #495ECE
+*/
+
+/* ************************************
+  EVERYTHING, HTML, BODY 
+************************************ */
+* {
+  font-family: 'Noto Sans', sans-serif;
+  flex-shrink: 0;
+}
+
+body,
+html {
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  /* Prevent font scaling in landscape while allowing user zoom */
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  /* lets it scroll lazy */
+}
+
+/* ************************************
+  CUSTOM STYLED INPUT, BUTTON, SELECT
+************************************ */
+*.styled-input {
+  position: relative;
+  width: 250px;
+  z-index: 99;
+}
+
+*.styled-input input[type="text"],
+*.styled-input select,
+button.styled-button {
+  display: block;
+  width: 250px;
+  height: 42px;
+  border-radius: 16px;
+  border: 0;
+  padding: 0 16px;
+  text-align: center;
+  font-size: 16px;
+  background-color: white;
+  z-index: 99;
+  -webkit-appearance: none;
+  appearance: none;
+  /* for safari appearance */
+}
+
+*.styled-input select option:first-of-type {
+  border-radius: 16px;
+}
+*.styled-input select:focus {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+*.styled-input select option {
+  color: #95989A;
+  background-color: white;
+}
+
+*.styled-input button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 42px;
+  width: 42px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border: 0;
+  padding: 0;
+  background-color: white;
+  cursor: pointer;
+  -webkit-appearance: none;
+  z-index: 99;
+  /* for safari appearance */
+}
+
+*.styled-input button i {
+  width: 100%;
+  height: 100%;
+  line-height: 42px;
+  font-size: 20px;
+  color: #495ece;
+  opacity: 0;
+  transition: opacity .2s linear;
+}
+
+/* ************************************
+  CUSTOM STYLED SECTION PARAGRAPHS
+************************************ */
+div.section {
+  width: 100%;
+  padding: 21px 10%;
+  color: #95989A;
+  background-color: #FFFFFF;
+}
+
+div.section > h4,
+div.section > h6,
+div.section > img,
+div.section > p,
+div.section > select {
+  max-width: 500px;
+  margin: auto !important;
+}
+
+div.section h6 {
+  font-weight: normal;
+  text-decoration: none;
+  font-style: italic;
+  margin: 0;
+  font-size: 16px;
+}
+
+div.section h4 {
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0;
+  font-size: 18px;
+}
+
+div.section h4.special {
+  font-weight: normal;
+  font-size: 22px;
+  margin-bottom: 4px !important;
+}
+
+div.section h4.special span {
+  font-weight: bold;
+}
+
+div.section p {
+  margin: 0;
+  font-size: 16px;
+}
+
+div.section p a {
+  text-decoration: underline;
+}
+
+div.section.section-gray {
+  background-color: #F3F3F3;
+}
+
+div.section.section-iconed {
+  margin: 32px 0;
+}
+
+div.section.section-iconed i {
+  display: block;
+  width: 100%;
+  height: 96px;
+  font-size: 96px;
+  text-align: center;
+  margin-bottom: 32px !important;
+}
+
+/* ************************************
+  CUSTOM STYLED SECTION APPENDED BUTTONS
+************************************ */
+div.appended {
+  position: relative;
+  width: 100%;
+  height: 32px;
+  background-color: #FFFFFF;
+  margin-bottom: 21px;
+}
+
+div.appended.section-gray {
+  background-color: #F3F3F3;
+}
+
+div.appended button.styled-button {
+  position: absolute;
+  top: 11px;
+  left: calc(50% - 125px);
+  color: #95989A;
+}
+
+/* ************************************
+  CUSTOM STYLED SHADOWED ROUNDS
+************************************ */
+a.round,
+div.round {
+  display: block;
+  flex-shrink: 0;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+}
+
+a.round.shadowed,
+div.round.shadowed {
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.20);
+}
+
+a.round.big,
+div.round.big {
+  width: 72px;
+  height: 72px;
+  line-height: 72px;
+}
+
+/* ************************************
+  CUSTOM GENERAL CSS CLASSES
+************************************ */
+.shadowed {
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.20);
+}
+
+/* ************************************
+  CUSTOM DEFAULT ELEMENTS STYLES
+************************************ */
+button {
+  cursor: pointer;
+}
+
+/* ************************************
+  CUSTOM ELEMENTS STYLES
+************************************ */
+#info {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  background-color: #495ece;
+  color: white;
+  padding: 0 16px;
+  text-align: center;
+}
+
+#info img {
+  display: inline-block;
+  margin: auto;
+  max-height: 48px;
+  max-width: 100px;
+  vertical-align: middle;
+}
+
+#info img:last-of-type {
+  display: none;
+}
+
+#info p {
+  font-size: small;
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 8px;
+  height: 30px;
+  min-width: 75px;
+  max-width: 30%;
+  padding: 0 16px;
+  margin: 0;
+  opacity: 0;
+  line-height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity .4s linear;
+}
+
+#info p:hover {
+  cursor: pointer;
+  opacity: .6 !important;
+  transition: opacity .1s linear;
+}
+
+#content {
+  width: 100%;
+  height: auto;
+}
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 64px;
+}
+
+#footer #footer-text {
+  flex-shrink: 0;
+}
+
+#footer #footer-text p {
+  font-size: 12px;
+}
+
+#footer #footer-text p a {
+  text-decoration: underline;
+}
+
+#footer #footer-text p:first-of-type {
+  text-transform: uppercase;
+}
+
+#footer #footer-round {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  background-color: #495ece;
+}
+
+#footer #footer-round img {
+  display: block;
+  width: 43px;
+}
+
+#footer #footer-round p {
+  font-size: 6px;
+  color: white;
+  margin-top: 4px;
+}
+
+/* ************************************
+  CUSTOM ANIMATIONS
+************************************ */
+@keyframes showUp {
+  from {
+    opacity: .8;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: showUp .2s linear 1;
+}
+
+/* ************************************
+  MEDIA QUERIES
+************************************ */
